@@ -64,8 +64,8 @@ model.summary()
 # In[219]:
 
 static_dir = "static/"
-from keras.utils.vis_utils import plot_model
-plot_model(model, to_file=static_dir + 'templates/images/model_plot.png', show_shapes=True, show_layer_names=True)
+# from keras.utils.vis_utils import plot_model
+# plot_model(model, to_file=static_dir + 'templates/images/model_plot.png', show_shapes=True, show_layer_names=True)
 
 
 # ### Configure labels

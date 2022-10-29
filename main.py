@@ -221,10 +221,6 @@ async def about(request: Request):
 # In[267]:
 
 
-nest_asyncio.apply()
-uvicorn.run(app, port=8080)
-
-
 # In[ ]:
 
 

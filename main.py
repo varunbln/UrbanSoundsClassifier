@@ -83,7 +83,6 @@ labels = ["air_conditioner", "car_horn", "children_playing", "dog_bark", "drilli
 
 sample_sounds_zip = static_dir + "sample_sounds.zip"
 uploads_dir = static_dir + "uploads/"
-get_ipython().system('@mkdir "static/uploads"')
 
 
 # # Model methods

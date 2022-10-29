@@ -110,8 +110,6 @@ def predict(file):
 # In[67]:
 
 
-for i in range(1, 8):
-    print(predict(r"static/sample_sounds/" + str(i) + ".wav"))
 
 
 # # API Routes

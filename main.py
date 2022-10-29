@@ -63,7 +63,7 @@ model.summary()
 
 # In[219]:
 
-
+static_dir = "static/"
 from keras.utils.vis_utils import plot_model
 plot_model(model, to_file=static_dir + 'templates/images/model_plot.png', show_shapes=True, show_layer_names=True)
 
@@ -81,7 +81,6 @@ labels = ["air_conditioner", "car_horn", "children_playing", "dog_bark", "drilli
 # In[125]:
 
 
-static_dir = "static/"
 sample_sounds_zip = static_dir + "sample_sounds.zip"
 uploads_dir = static_dir + "uploads/"
 get_ipython().system('@mkdir "static/uploads"')

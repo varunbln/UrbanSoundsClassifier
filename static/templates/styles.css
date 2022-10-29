@@ -1,0 +1,79 @@
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #bcaaa4;
+    color: #4e342e;
+}
+
+body {
+    margin: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #8c7b75;
+}
+
+button {
+    background-color: #8c7b75;
+    height: 7vh;
+    margin-left: 4vw;
+    color: #cfc2bf;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    cursor: pointer;
+}
+
+#contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 25px;
+}
+
+a:link, a:visited {
+    color: #4e342e;
+}
+
+#showcase {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: #8c7b75;
+    border: none;
+    color: #cfc2bf;
+    height: 4vh;
+    margin-top: 2vh;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+}
+input:active, input:focus {
+    outline: none;
+}
+
+input::-webkit-file-upload-button {
+    background-color: #8c7b75;
+    color: #cfc2bf;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: solid 2px #4e342e;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#upload {
+    cursor: pointer;
+}

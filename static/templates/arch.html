@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>UrbanSounds8k Classifier</title>
+    <link href="{{ url_for('static', path='/templates/styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/templates/images/logo.png') }}" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <div id="navbar">
+        <button onclick="home()">Home</button>
+        <button onclick="sampleData()">Sample Data</button>
+        <button onclick="docs()">API Documentation</button>
+        <button onclick="arch()">Model Architecture</button>
+        <button onclick="about()">About</button>
+    </div>
+    <div id="contents">
+        <h1>Model Architecture</h1>
+        <img src="{{ url_for('static', path='/templates/images/model_plot.png') }}">
+    </div>
+    <script>
+        function sampleData() {
+            window.location = "/sample-data";
+        }
+
+        function about() {
+            window.location = "/about";
+        }
+
+        function arch() {
+            window.location = "/arch";
+        }
+
+        function home() {
+            window.location = "/";
+        }
+
+        function docs() {
+            window.location = "/docs";
+        }
+    </script>
+</body>
+
+</html>

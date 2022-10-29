@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>UrbanSounds8k Classifier</title>
+    <link href="{{ url_for('static', path='/templates/styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/templates/images/logo.png') }}" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <div id="navbar">
+        <button onclick="home()">Home</button>
+        <button onclick="sampleData()">Sample Data</button>
+        <button onclick="docs()">API Documentation</button>
+        <button onclick="arch()">Model Architecture</button>
+        <button onclick="about()">About</button>
+    </div>
+    <div id="contents">
+        <h1>UrbanSounds8k Classifier</h1>
+        <p>The Convolutional Neural Network(CNN) has been trained on the UrbanSounds8K dataset. This dataset contains
+            8732 labelled sound
+            excerpts (<=4s) of urban sounds from 10 classes: air_conditioner, car_horn,children_playing, dog_bark,
+                drilling, enginge_idling, gun_shot, jackhammer, siren, and street_music. All excerpts are taken from
+                field recordings uploaded to <a href="https://freesound.org">FreeSound</a>. According to <a
+                    href="https://research.google/pubs/pub45611/">research conducted by Google</a>, CNNs have shown
+                promise
+                for audio classification.
+                Additionally,
+                based off my own experiments, a CNN performs better than an ANN at classifying this dataset and achieved
+                an accuracy of around 85%.
+        </p>
+        <h1>Model Showcase</h1>
+        <h2>Upload Sound File</h2>
+        <form enctype="multipart/form-data" id="showcase" method="post">
+            <input id="file-upload" name="file" type="file" accept=".wav">
+            <input id="upload" onclick="submitForm()" type="button" value="Submit">
+            <span>Sound file must be of .wav extension. Sound files can be found by clicking Sample Data in the navbar.
+            </span>
+        </form>
+        <h2>Prediction</h2>
+        <p>The given sound is of class
+            <span id="prediction">Predicting...</span>
+        </p>
+    </div>
+    <script>
+        function submitForm() {
+            var formElement = document.getElementById('showcase');
+            var data = new FormData(formElement);
+            fetch('/upload', {
+                method: 'POST',
+                body: data,
+            })
+                .then(resp => resp.json())
+                .then(data => {
+                    document.getElementById("prediction").innerHTML = data["message"];
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+
+        function sampleData() {
+            window.location = "/sample-data";
+        }
+
+        function about() {
+            window.location = "/about";
+        }
+
+        function arch() {
+            window.location = "/arch";
+        }
+
+        function home() {
+            window.location = "/";
+        }
+
+        function docs() {
+            window.location = "/docs";
+        }
+    </script>
+</body>
+
+</html>

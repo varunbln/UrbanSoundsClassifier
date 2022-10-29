@@ -7,8 +7,6 @@
 
 # In[2]:
 
-
-get_ipython().system('pip install tensorflow')
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
@@ -17,7 +15,6 @@ from tensorflow import keras
 # In[3]:
 
 
-get_ipython().system('pip install fastapi[all]')
 import fastapi
 from fastapi import FastAPI
 
@@ -25,21 +22,18 @@ from fastapi import FastAPI
 # In[4]:
 
 
-get_ipython().system('pip install uvicorn')
 import uvicorn
 
 
 # In[5]:
 
 
-get_ipython().system('pip install nest_asyncio')
 import nest_asyncio
 
 
 # In[6]:
 
 
-get_ipython().system('pip install python-multipart')
 
 
 # In[7]:
@@ -54,7 +48,6 @@ from fastapi.templating import Jinja2Templates
 # In[9]:
 
 
-get_ipython().system('pip install librosa')
 import librosa
 from sklearn.preprocessing import LabelEncoder
 

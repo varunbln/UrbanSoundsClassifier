@@ -46,6 +46,7 @@
         function submitForm() {
             var formElement = document.getElementById('showcase');
             var data = new FormData(formElement);
+            document.getElementById("prediction").innerHTML = "Predicting...";
             fetch('/upload', {
                 method: 'POST',
                 body: data,
